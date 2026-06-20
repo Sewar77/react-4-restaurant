@@ -17,7 +17,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -42,7 +42,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -67,7 +67,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -92,7 +92,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -117,7 +117,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -142,7 +142,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -167,7 +167,7 @@ export default function Feedbacks() {
           <Grid size={{ sm: 12, md: 6, lg: 3 }}>
             <Card>
               <CardHeader title="George M.Michel" />
-              <CardMedia component={"img"} src="../../../public/burger.avif" />
+              <CardMedia component={"img"} src="/burger.avif" />
               <CardContent>
                 <Typography variant="body1">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.

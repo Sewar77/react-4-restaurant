@@ -14,7 +14,7 @@ export default function About() {
         <Grid size={{ sm: 12, md: 6, lg: 6 }} sx={{ margin: "auto" }}>
           <Box
             component={"img"}
-            src="../../../public/burger.avif"
+            src="/burger.avif"
             sx={{ borderRadius: "30px", width: { sm: "300px", md: "500px" } }}
           />
         </Grid>
