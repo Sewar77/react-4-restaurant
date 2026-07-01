@@ -100,7 +100,7 @@ export default function DisplayMenuItems() {
       isAvailable: true,
     },
   ];
-  // localStorage.setItem("menu", JSON.stringify(menuItems));
+  localStorage.setItem("menu", JSON.stringify(menuItems));
   return (
     <>
       <Container>
