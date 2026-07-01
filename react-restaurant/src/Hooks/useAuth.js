@@ -1,0 +1,82 @@
+import { useContext, useEffect, useState } from "react"
+import { userContext } from "../Context/UserContext";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+export const useAuth = () => {
+    const { users, setUsers } = useContext(userContext) //this is how to use the context 
+    const [currentUser, setCurrentUser] = useState({})
+    const navigate = useNavigate()
+    const register = (userData) => {
+        try {
+            //validation
+            if (!userData.email || !userData.name || !userData.password || !userData.confirmPassword) {
+                toast.error("Please fill all feilds!");
+                return
+            }
+            if (userData.password !== userData.confirmPassword) {
+                toast.error("Passwords should match!");
+                return
+            }
+
+            const isExist = users.find(user => user.email === userData.email)
+            if (isExist) {
+                toast.error("Email already exist!");
+                return
+            }
+            const newUser = {
+                name: userData.name,
+                email: userData.email,
+                password: userData.password,
+                confirmPassword: userData.confirmPassword,
+                role: "user",
+                id: Date.now() //id should be unique
+            }
+            toast.success("Registeration sucessfully")
+            // [...array, newarray] => shadow copy for array
+            const updatedUsers = [...users, newUser]
+            setUsers(updatedUsers)
+            localStorage.setItem("users", JSON.stringify(updatedUsers))
+        } catch (err) {
+            console.error(err)
+        }
+    }
+    const login = (userData) => {
+        try {
+            if (!userData.email || !userData.password) {
+                toast.error("Please Fill All Fields")
+                return;
+            }
+            const isExist = users.find(user => user.email === userData.email)
+            if (!isExist) {
+                toast.error("Email does not exist")
+                return
+            }
+            if (isExist.password !== userData.password) {
+                toast.error("Password incorrect")
+                return
+            }
+            //role based access => rba
+
+            if (isExist.role === "user") navigate("/home")
+            if (isExist.role === "admin") navigate("/admin/dashboard")
+            localStorage.setItem("currentUser", JSON.stringify(isExist))
+            // store the user who did login
+            setCurrentUser(isExist)
+            // the currentUser value => changed!
+            toast.success("Login successfully")
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    useEffect(() => {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"))
+        //get the user who logged in 
+        setCurrentUser(currentUser)
+    }, []) //render => based on condition => variable, refresh, 
+
+    return { register, login, currentUser }
+}
+
+
+// login, register, logout, currentUser.
+//useUsers => getallusers, getuser, edituser, deleteuser/ 

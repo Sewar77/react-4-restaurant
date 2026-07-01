@@ -10,13 +10,13 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
   // js code
   const navigate = useNavigate();
+  // define navigagte
   return (
     <>
       {/* html code */}
       <AppBar position="sticky" sx={{ bgcolor: "#9f0000" }}>
         <Toolbar sx={{ justifyContent: "space-between", p: 3 }}>
           <Typography variant="h3">Logo</Typography>
-
           <List
             sx={{
               display: "flex",
@@ -27,7 +27,9 @@ export default function Header() {
           >
             <ListItemButton>Home</ListItemButton>
             <ListItemButton>Login</ListItemButton>
-            <ListItemButton>Register</ListItemButton>
+            <ListItemButton onClick={() => navigate("/register")}>
+              Register
+            </ListItemButton>
             <ListItemButton>Contact</ListItemButton>
             {/* use the router name  */}
             <ListItemButton onClick={() => navigate("/about-us")}>
