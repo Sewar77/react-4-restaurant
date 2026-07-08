@@ -30,7 +30,9 @@ export default function Header() {
             <ListItemButton onClick={() => navigate("/register")}>
               Register
             </ListItemButton>
-            <ListItemButton>Contact</ListItemButton>
+            <ListItemButton onClick={() => navigate("/feedback")}>
+              Feedback
+            </ListItemButton>
             {/* use the router name  */}
             <ListItemButton onClick={() => navigate("/about-us")}>
               About

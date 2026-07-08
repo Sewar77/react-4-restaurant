@@ -11,6 +11,8 @@ import ManageUsers from "./components/Admin/Manage/ManageUser/ManageUsers";
 import ManageMane from "./components/Admin/Manage/ManageMenu/ManageMenu";
 import AdminLayout from "./components/Admin/AdminLayout";
 import ManageCategories from "./components/Admin/Manage/ManageCategories/ManageCategories";
+import Feedback from "./components/Feedback/Feedback";
+import ManageMessages from "./components/Admin/Manage/ManageMessages/ManageMessages";
 function App() {
   return (
     <>
@@ -23,12 +25,14 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/feedback" element={<Feedback />} />
 
         {/* admin routes */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index path="dashboard" element={<AdminDashboard />} />
           <Route path="manage-users" element={<ManageUsers />} />
           <Route path="manage-menu" element={<ManageMane />} />
+          <Route path="manage-messages" element={<ManageMessages />} />
           <Route path="manage-categories" element={<ManageCategories />} />
         </Route>
       </Routes>

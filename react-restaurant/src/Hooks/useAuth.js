@@ -23,6 +23,7 @@ export const useAuth = () => {
                 toast.error("Email already exist!");
                 return
             }
+            //new item
             const newUser = {
                 name: userData.name,
                 email: userData.email,
@@ -34,6 +35,7 @@ export const useAuth = () => {
             toast.success("Registeration sucessfully")
             // [...array, newarray] => shadow copy for array
             const updatedUsers = [...users, newUser]
+            //store in localstorage
             setUsers(updatedUsers)
             localStorage.setItem("users", JSON.stringify(updatedUsers))
         } catch (err) {
